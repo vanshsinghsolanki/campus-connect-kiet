@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /my-profile.html
+Disallow: /thank-you.html

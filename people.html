@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Explore People · Campus Connect</title>
+  <meta name="description" content="Search and filter students, seniors and alumni by department, batch, skill and verification status.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem("cc:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/pages/people.js" defer></script>
+</head>
+<body data-page="people">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" tabindex="-1">
+    <header class="container page-head">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">People</span></nav>
+      <h1>Explore people</h1>
+      <p>Find students, seniors and alumni from your campus. Filter by department, batch, skill or verification status, then connect.</p>
+    </header>
+
+    <div class="container mt-3">
+      <form id="people-filters" class="listing" role="search" aria-label="Search and filter people">
+        <!-- Filters: sidebar on desktop, bottom sheet on mobile -->
+        <div class="filters-sheet" id="filters-sheet">
+          <div class="filters-sheet__backdrop" data-sheet-close></div>
+          <aside class="filters" aria-labelledby="filters-title">
+            <div class="filters__head">
+              <h2 id="filters-title">Filters</h2>
+              <div class="btn-row">
+                <button type="reset" class="btn btn--ghost btn--sm">Clear all</button>
+                <button type="button" class="icon-btn filters__close" data-sheet-close aria-label="Close filters"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+              </div>
+            </div>
+
+            <fieldset class="filters__group">
+              <legend>Member type</legend>
+              <div class="check-list" id="role-options"></div>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend>Verification</legend>
+              <div class="check-list" id="verification-options"></div>
+            </fieldset>
+
+            <div class="filters__group">
+              <label for="f-department">Department</label>
+              <select id="f-department" name="department"><option value="">All departments</option></select>
+            </div>
+
+            <div class="filters__group">
+              <label for="f-batch">Batch (graduation year)</label>
+              <select id="f-batch" name="batch"><option value="">All batches</option></select>
+            </div>
+
+            <div class="filters__group">
+              <label for="f-skill">Skill</label>
+              <select id="f-skill" name="skill"><option value="">All skills</option></select>
+            </div>
+
+            <div class="filters__foot">
+              <button type="reset" class="btn btn--outline">Clear</button>
+              <button type="button" class="btn btn--primary" data-sheet-close>Show <span data-result-count>0</span> results</button>
+            </div>
+          </aside>
+        </div>
+
+        <!-- Results -->
+        <section aria-labelledby="results-title">
+          <h2 id="results-title" class="sr-only">Results</h2>
+          <div class="listing__toolbar">
+            <div class="input-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <label for="f-q" class="sr-only">Search by name, skill, company</label>
+              <input id="f-q" type="search" name="q" placeholder="Search name, skill, company…" autocomplete="off">
+            </div>
+            <label for="f-sort" class="sr-only">Sort by</label>
+            <select id="f-sort" name="sort">
+              <option value="relevance">Sort: Recommended</option>
+              <option value="name">Name (A–Z)</option>
+              <option value="batch-desc">Batch (newest)</option>
+              <option value="batch-asc">Batch (oldest)</option>
+              <option value="connections">Most connected</option>
+            </select>
+            <button type="button" class="btn btn--outline filter-toggle" id="filter-toggle" aria-controls="filters-sheet" aria-expanded="false">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>
+              Filters <span class="count" id="filter-count"></span>
+            </button>
+          </div>
+
+          <div class="listing__summary">
+            <p aria-live="polite" id="result-summary">Loading people…</p>
+            <div class="active-filters" id="active-filters"></div>
+          </div>
+
+          <div class="grid grid--3" id="people-grid"></div>
+        </section>
+      </form>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

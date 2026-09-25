@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profile · Campus Connect</title>
+  <meta name="description" content="View a student, senior or alumni profile on Campus Connect. Connect, message or request a call.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem("cc:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/pages/profile.js" defer></script>
+</head>
+<body data-page="people">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div id="profile-root" aria-busy="true">
+      <div class="profile-cover"></div>
+      <div class="container">
+        <div class="profile-head">
+          <span class="avatar avatar--xl sk" aria-hidden="true"></span>
+          <div class="stack"><div class="sk sk--line w-50" style="height:24px"></div><div class="sk sk--line w-70"></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

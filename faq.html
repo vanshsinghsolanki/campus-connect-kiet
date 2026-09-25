@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FAQ · Campus Connect</title>
+  <meta name="description" content="Frequently asked questions about Campus Connect accounts, verification, connecting and more.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem("cc:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/pages/faq.js" defer></script>
+</head>
+<body data-page="faq">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" tabindex="-1">
+    <div class="container" style="max-width:860px">
+      <header class="page-head">
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <span aria-current="page">FAQ</span></nav>
+        <h1>Frequently asked questions</h1>
+        <p>Can't find what you need? <a href="contact.html">Contact us</a>.</p>
+      </header>
+
+      <div class="input-icon mt-3 mb-3">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <label for="faq-q" class="sr-only">Search questions</label>
+        <input id="faq-q" type="search" placeholder="Search questions…" autocomplete="off">
+      </div>
+      <p id="faq-empty" class="empty-state hidden" role="status">No questions match your search.</p>
+
+      <section class="faq-group" aria-labelledby="faq-general">
+        <h2 id="faq-general" class="mb-2 mt-3" style="font-size:1.15rem">General</h2>
+        <div class="accordion">
+          <details><summary>What is Campus Connect?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Campus Connect is a platform that connects students with verified seniors and alumni from the same campus for mentorship, referrals, opportunities, learning resources and events.</p></div></details>
+          <details><summary>Who can join?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Current students (juniors and seniors) and alumni of the college. Admin accounts will be introduced in Phase 2.</p></div></details>
+          <details><summary>Is it free?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Yes, Campus Connect is completely free for students and alumni.</p></div></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-account">
+        <h2 id="faq-account" class="mb-2 mt-4" style="font-size:1.15rem">Account & verification</h2>
+        <div class="accordion">
+          <details><summary>How do I create an account?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Go to <a href="register.html">Create account</a> and complete the 3 short steps: account details, profile information and preferences.</p></div></details>
+          <details><summary>Why should I verify my profile?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Verified profiles get a badge that shows you're genuinely from the campus. Seniors and alumni are much more likely to accept requests from verified members.</p></div></details>
+          <details><summary>What verification methods are available?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>College email (instant, with a one-time code), student/alumni ID card upload, or a degree/provisional certificate for alumni. <a href="verify.html">Start verification</a>.</p></div></details>
+          <details><summary>I forgot my password. What do I do?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Password reset will be available with real authentication in Phase 2. In the current demo, any password with 8+ characters works.</p></div></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-connect">
+        <h2 id="faq-connect" class="mb-2 mt-4" style="font-size:1.15rem">Connecting with people</h2>
+        <div class="accordion">
+          <details><summary>How do I find a mentor?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Open <a href="people.html">People</a> and filter by department, batch, skill or verification status. Open a profile to see what they're open to (mentorship, referrals, mock interviews…).</p></div></details>
+          <details><summary>What's the difference between Connect, Message and Request call?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p><strong>Connect</strong> sends a request with a short note. <strong>Message</strong> opens a chat window. <strong>Request call</strong> lets you propose a voice or video call with a date, time slot and topic.</p></div></details>
+          <details><summary>When can I see someone's email?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Contact details are only visible after you're connected, to protect everyone's privacy.</p></div></details>
+        </div>
+      </section>
+
+      <section class="faq-group" aria-labelledby="faq-opps">
+        <h2 id="faq-opps" class="mb-2 mt-4" style="font-size:1.15rem">Opportunities, resources & events</h2>
+        <div class="accordion">
+          <details><summary>Who posts opportunities?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Seniors and alumni share internships, jobs, hackathons and certifications, usually from their own companies or communities.</p></div></details>
+          <details><summary>Can I save items for later?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Yes. Tap the bookmark icon on any opportunity or resource. You'll find saved items under <a href="my-profile.html#saved">My Profile → Saved</a>.</p></div></details>
+          <details><summary>How do I add an event to my calendar?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Open any upcoming event and click <strong>Add to calendar</strong>. It downloads an .ics file that works with Google Calendar, Outlook and Apple Calendar.</p></div></details>
+        </div>
+      </section>
+
+      <section class="faq-group mb-3" aria-labelledby="faq-tech">
+        <h2 id="faq-tech" class="mb-2 mt-4" style="font-size:1.15rem">About this version</h2>
+        <div class="accordion">
+          <details><summary>Is my data stored on a server?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>No. This is a Phase 1 front-end prototype. Profiles, opportunities, resources and events are sample data, and your demo activity is saved only in your browser's local storage.</p></div></details>
+          <details><summary>What's coming in Phase 2?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><div><p>Real authentication, a backend API and database, persisted connection requests, admin verification and real-time messaging. See the <a href="about.html#roadmap">roadmap</a>.</p></div></details>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

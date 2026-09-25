@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Log in · Campus Connect</title>
+  <meta name="description" content="Log in to Campus Connect (front-end demo, no real authentication).">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem("cc:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/pages/login.js" defer></script>
+</head>
+<body data-page="login" data-no-footer>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" tabindex="-1" class="auth">
+    <aside class="auth__aside" aria-hidden="true">
+      <div>
+        <h2>Welcome back to your campus network.</h2>
+        <p>Pick up where you left off: your connections, saved opportunities and upcoming events are waiting.</p>
+        <ul>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Reach verified seniors & alumni</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Referrals & internship leads</li>
+          <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Campus events in one place</li>
+        </ul>
+      </div>
+      <p>“Campus Connect helped me land my first internship through an alumni referral.”<br><strong>Riya K., CSE</strong></p>
+    </aside>
+
+    <div class="auth__main">
+      <div class="auth__card">
+        <h1>Log in</h1>
+        <p>New here? <a href="register.html">Create an account</a></p>
+
+        <div id="already" class="hidden"></div>
+
+        <p class="notice notice--info mb-3">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span><strong>Demo login:</strong> any valid email and password (8+ characters) works. No real authentication is performed. <button type="button" class="link-btn" id="fill-demo" style="text-decoration:underline;font-weight:600">Use demo account</button></span>
+        </p>
+
+        <form id="login-form" class="form" novalidate>
+          <div class="field">
+            <label class="field__label" for="login-email">Email</label>
+            <div class="input-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <input id="login-email" name="email" type="email" required autocomplete="email" placeholder="you@kiet.edu">
+            </div>
+          </div>
+
+          <div class="field">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <label class="field__label" for="login-password">Password</label>
+              <a href="coming-soon.html?feature=password-reset" class="text-sm">Forgot password?</a>
+            </div>
+            <div class="input-action">
+              <input id="login-password" name="password" type="password" required minlength="8" autocomplete="current-password" placeholder="••••••••">
+              <button type="button" class="icon-btn" data-toggle-password="#login-password" aria-label="Show password" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></button>
+            </div>
+          </div>
+
+          <div class="field field--check">
+            <label class="check"><input type="checkbox" name="remember" checked><span>Keep me logged in on this device</span></label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--block">Log in</button>
+        </form>
+
+        <div class="divider">or continue with</div>
+        <div class="social-btns">
+          <button type="button" class="btn btn--outline" data-phase2="Google sign-in">Google</button>
+          <button type="button" class="btn btn--outline" data-phase2="LinkedIn sign-in">LinkedIn</button>
+        </div>
+        <p class="text-sm muted mt-2 center">Social sign-in will be enabled with Firebase Authentication in Phase 2.</p>
+      </div>
+    </div>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>

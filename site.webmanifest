@@ -1,0 +1,10 @@
+{
+  "name": "Campus Connect",
+  "short_name": "CampusConnect",
+  "description": "Connect students, seniors and alumni on one trusted campus network.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f7fb",
+  "theme_color": "#4f46e5",
+  "icons": [{ "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

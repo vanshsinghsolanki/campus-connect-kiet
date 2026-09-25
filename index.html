@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Campus Connect: Students, Seniors & Alumni Network</title>
+  <meta name="description" content="Campus Connect helps students find verified seniors and alumni, discover internships, jobs, hackathons, learning resources and campus events.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="Campus Connect">
+  <meta property="og:description" content="One trusted network for students, seniors and alumni.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem("cc:theme"));if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/components.js" defer></script>
+  <script src="assets/js/pages/home.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app-header"></div>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="hero__pill"><span class="badge badge--primary">New</span> Verified alumni mentors on your campus</span>
+          <h1>Connect with the people who've <span class="grad">walked your path.</span></h1>
+          <p class="hero__lead">Find verified seniors and alumni, get mentorship and referrals, and discover internships, resources and events, all in one place built for your campus.</p>
+
+          <form class="hero__search" action="people.html" method="get" role="search">
+            <div class="input-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <label for="hero-q" class="sr-only">Search people by name, skill or company</label>
+              <input id="hero-q" type="search" name="q" placeholder="Try “Machine Learning” or “Microsoft”" autocomplete="off">
+            </div>
+            <button class="btn btn--primary" type="submit">Search</button>
+          </form>
+
+          <div class="btn-row">
+            <a class="btn btn--primary btn--lg" href="people.html">Explore people</a>
+            <a class="btn btn--outline btn--lg" href="register.html">Create free account</a>
+          </div>
+
+          <div class="hero__trust mt-3">
+            <div class="avatar-stack" id="hero-avatars" aria-hidden="true"></div>
+            <span id="hero-trust-text">KIET students, seniors & alumni already connecting</span>
+          </div>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true" id="hero-visual"></div>
+      </div>
+    </section>
+
+    <!-- Official institution -->
+    <section class="trusted" aria-labelledby="trusted-title">
+      <div class="container">
+        <div class="trusted__card">
+          <span class="trusted__label" id="trusted-title">Officially used by</span>
+          <img class="trusted__logo trusted__logo--light" src="assets/img/brand/kiet-logo.webp" alt="KIET Deemed to be University, Delhi-NCR, Ghaziabad" width="160" height="72" loading="eager">
+          <img class="trusted__logo trusted__logo--dark" src="assets/img/brand/kiet-logo-dark.webp" alt="" aria-hidden="true" width="160" height="67" loading="lazy">
+          <span class="trusted__divider" aria-hidden="true"></span>
+          <div class="trusted__meta">
+            <strong>KIET Deemed to be University</strong>
+            <span>Delhi-NCR, Ghaziabad · Official campus network for students, seniors & alumni</span>
+            <div class="badge-row"><span class="badge badge--success">NAAC accredited</span><span class="badge badge--primary">UGC · Section 3</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="section--tight">
+      <div class="container">
+        <div class="stats" id="stats">
+          <div class="stat"><strong data-stat="profiles">–</strong><span>Member profiles</span></div>
+          <div class="stat"><strong data-stat="verified">–</strong><span>Verified members</span></div>
+          <div class="stat"><strong data-stat="opportunities">–</strong><span>Open opportunities</span></div>
+          <div class="stat"><strong data-stat="events">–</strong><span>Upcoming events</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Everything in one place</span>
+            <h2>Built for how students actually grow</h2>
+            <p>Skip the random WhatsApp groups. Campus Connect brings your college network into one searchable platform.</p>
+          </div>
+        </div>
+        <div class="grid grid--4">
+          <a class="card feature reveal" href="people.html">
+            <span class="feature__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>People Directory</h3>
+            <p>Search students, seniors and alumni by department, batch, skill and verification status.</p>
+            <span class="more">Explore people →</span>
+          </a>
+          <a class="card feature reveal" href="opportunities.html">
+            <span class="feature__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <h3>Opportunities</h3>
+            <p>Internships, jobs, hackathons and certifications shared by alumni who work there.</p>
+            <span class="more">Browse opportunities →</span>
+          </a>
+          <a class="card feature reveal" href="resources.html">
+            <span class="feature__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></span>
+            <h3>Resource Library</h3>
+            <p>Notes, previous-year papers, roadmaps and courses curated by seniors.</p>
+            <span class="more">Open library →</span>
+          </a>
+          <a class="card feature reveal" href="events.html">
+            <span class="feature__icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Campus Events</h3>
+            <p>Workshops, webinars, hackathons and alumni meetups. Register in one tap.</p>
+            <span class="more">See events →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">How it works</span>
+            <h2>Three steps to your campus network</h2>
+          </div>
+          <a class="btn btn--outline" href="register.html">Get started</a>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><h3>Create your profile</h3><p>Sign up with your details: department, batch, skills and what you're looking for.</p></div>
+          <div class="step reveal"><h3>Get verified</h3><p>Verify with your college email or ID card so others know you're genuinely from campus.</p></div>
+          <div class="step reveal"><h3>Connect & grow</h3><p>Reach out to seniors and alumni, request calls, apply to opportunities and join events.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured people -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Featured mentors</span>
+            <h2>Verified seniors & alumni</h2>
+            <p>People who've opted in to mentor, refer and guide juniors.</p>
+          </div>
+          <a class="btn btn--ghost" href="people.html?verification=verified">View all →</a>
+        </div>
+        <div class="grid grid--4" id="featured-people" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Opportunities -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Closing soon</span>
+            <h2>Latest opportunities</h2>
+          </div>
+          <a class="btn btn--ghost" href="opportunities.html">All opportunities →</a>
+        </div>
+        <div class="grid grid--3" id="home-opps" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Don't miss out</span>
+            <h2>Upcoming events</h2>
+          </div>
+          <a class="btn btn--ghost" href="events.html">All events →</a>
+        </div>
+        <div class="grid grid--3" id="home-events" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Student stories</span>
+            <h2>What our community says</h2>
+          </div>
+        </div>
+        <div class="grid grid--3">
+          <figure class="card quote reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+            <blockquote>“I found an alumnus at Microsoft in two minutes. He reviewed my resume and gave me a referral. That would never have happened otherwise.”</blockquote>
+            <figcaption><span class="avatar avatar--md"><img src="assets/img/avatars/t-riya.jpg" alt="" loading="lazy"></span><div><strong>Riya K.</strong><span>3rd year, CSE</span></div></figcaption>
+          </figure>
+          <figure class="card quote reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+            <blockquote>“The previous-year papers and senior notes in the resource library saved my semester. Everything is in one place now.”</blockquote>
+            <figcaption><span class="avatar avatar--md"><img src="assets/img/avatars/t-aditya.jpg" alt="" loading="lazy"></span><div><strong>Aditya M.</strong><span>2nd year, ECE</span></div></figcaption>
+          </figure>
+          <figure class="card quote reveal">
+            <div class="stars" aria-label="5 out of 5 stars"><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg></div>
+            <blockquote>“As an alumna, I love giving back. Campus Connect makes it easy for juniors to find me, and the verification means I know who I'm talking to.”</blockquote>
+            <figcaption><span class="avatar avatar--md"><img src="assets/img/avatars/p004.jpg" alt="" loading="lazy"></span><div><strong>Sneha I.</strong><span>Alumna, 2019 · Qualcomm</span></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <div>
+            <h2>Your campus network is waiting.</h2>
+            <p>Create your profile in under two minutes, get verified, and start connecting with seniors and alumni today.</p>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn--white btn--lg" href="register.html">Create account</a>
+            <a class="btn btn--glass btn--lg" href="about.html">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="app-footer"></div>
+</body>
+</html>
