@@ -65,12 +65,12 @@ Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 
 ## 📄 Project documents
 
-The academic documents for this project are listed below.
+The individual academic synopsis and project presentation are available below.
 
 | Document | Description | Link |
 |---|---|---|
-| Project presentation | Campus Connect project slide deck (.pptx). | [View / download presentation](presentation/Campus-Connect-Presentation.pptx) |
-| Project synopsis | The synopsis PDF/DOCX is not currently present in the repository. | *To be added* |
+| **Project synopsis** | Individual submission version, revised from the earlier synopsis while preserving the project scope and technical details. | [Read synopsis](docs/Campus-Connect-Individual-Synopsis.md) |
+| **Project presentation** | Campus Connect project slide deck (.pptx). | [View / download presentation](presentation/Campus-Connect-Presentation.pptx) |
 
 ## 🎯 Overview
 
