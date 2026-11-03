@@ -63,6 +63,15 @@ Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 
 ---
 
+## 📄 Project documents
+
+The academic documents for this project are listed below.
+
+| Document | Description | Link |
+|---|---|---|
+| Project presentation | Campus Connect project slide deck (.pptx). | [View / download presentation](presentation/Campus-Connect-Presentation.pptx) |
+| Project synopsis | The synopsis PDF/DOCX is not currently present in the repository. | *To be added* |
+
 ## 🎯 Overview
 
 Campus Connect is a social-academic networking platform concept designed around the needs of students, seniors and alumni at KIET. It brings people discovery, mentorship-oriented connections, opportunities, learning resources and campus events into one organised interface.
