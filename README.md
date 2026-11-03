@@ -1,247 +1,520 @@
 <div align="center">
 
-<img src="assets/img/favicon.svg" alt="Campus Connect logo" width="72" height="72">
+<img src="assets/img/favicon.svg" alt="Campus Connect logo" width="76" height="76">
 
 # Campus Connect
 
-**A social-academic networking platform connecting KIET students, seniors & alumni.**
+### Your campus network. One connected space.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)
-![Phase](https://img.shields.io/badge/Phase-1%20·%20Front%20end-4F46E5)
+**Discover people. Learn from seniors. Find opportunities. Stay connected.**
 
-Synopsis project for **Front End Web Development (26CA205PCB)**, Master of Computer Applications (MCA)
-**KIET Deemed to be University**, Delhi-NCR, Ghaziabad
+<p>
+  <img src="https://img.shields.io/badge/Project-Individual%20Academic%20Project-4F46E5?style=for-the-badge" alt="Individual academic project">
+  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-7C3AED?style=for-the-badge" alt="HTML CSS JavaScript">
+  <img src="https://img.shields.io/badge/Status-Phase%201%20Prototype-0891B2?style=for-the-badge" alt="Phase 1 prototype">
+</p>
+
+<p>
+  <a href="https://vanshsinghsolanki.github.io/campus-connect-kiet/">Deployment URL</a> ·
+  <a href="https://github.com/vanshsinghsolanki/campus-connect-kiet">Source Code</a> ·
+  <a href="#-getting-started">Run Locally</a>
+</p>
+
+**An individual academic project** for Front End Web Development (**26CA205PCB**)  
+Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 
 </div>
 
-![Campus Connect home page](docs/screenshots/home.jpg)
+<p align="center">
+  <img src="docs/screenshots/home.jpg" alt="Campus Connect homepage preview" width="100%">
+</p>
 
 ---
 
-## 👥 Project team
+## ✦ Project at a glance
 
-| Name | Roll number | Role |
-|---|---|---|
-| **Vansh Singh Solanki** | 2628MCA0112 | Project Creator |
-| **Vikas Jain** | 2628MCA0311 | Project Creator |
-| **Shruti** | 2628MCA0248 | Project Creator |
-
-**Guided by:** Dr. Shashank Bhardwaj, Department of Computer Applications, KIET Deemed to be University
-**Submitted:** August 2026
-
----
-
-## 📌 About the project
-
-Most students still find seniors, mentors and opportunities through WhatsApp groups, notice boards and word of mouth. That information is scattered, impossible to search, and only reaches students who already know the right people.
-
-**Campus Connect** brings all of this into one organised platform. Students can:
-
-- discover **verified seniors and alumni**, and search and filter them by academic year, department, skill and verification status
-- open detailed **profiles** and **connect**, **message** or **request a call**
-- explore an **opportunities board** (internships, jobs, hackathons, certifications)
-- browse a **resource library** (notes, question papers, roadmaps, courses) and **campus events**
-- go through **registration**, **verification** and **login** workflows
-
-> **Phase 1 scope (current):** a front-end prototype built with **HTML5, CSS3 and vanilla JavaScript**.
-> There is **no backend, database or real authentication** yet. All profiles, opportunities, resources and events are **sample data** (`assets/js/data.js`). Login, registration, verification, connecting and messaging are **UI demos** whose data is saved only in the browser (`localStorage`).
-
----
-
-## ✨ Features (Phase 1)
-
-| Use case | What you can do |
+| | |
 |---|---|
-| Browse profiles | Directory of sample student, senior and alumni profiles with real photos |
-| Search / filter profiles | Keyword search plus filters for member type, verification, department, batch and skill, with sorting. Filters stay in the URL, so a filtered view can be shared |
-| View profile detail | Tabs for About, Experience, Skills and Activity. **Connect** (with a note), **Message** (demo chat) and **Request a call** (voice/video, date, time slot) |
-| Register (demo) | 4-step wizard: account, profile (with **photo upload**), preferences, review. Includes validation, a password-strength meter and draft autosave |
-| Verify profile (demo) | College-email OTP, ID card upload or certificate upload, then a status tracker |
-| Login (demo) | Form validation, show/hide password, redirect back to the page you came from |
-| Browse opportunities | Category tabs with counts, deadline countdown, save, and Apply (demo) |
-| Browse resources | Filter by type, department and subject; open the source or download |
-| Browse events | Filter by type, mode and upcoming/past; Register (demo) and **Add to calendar (.ics)** |
+| **Project** | Campus Connect |
+| **Project type** | Individual academic project |
+| **Creator** | Vansh Singh Solanki |
+| **Roll number** | 2628MCA0112 |
+| **Programme** | Master of Computer Applications (MCA) |
+| **Institution** | KIET Deemed to be University |
+| **Course** | Front End Web Development |
+| **Course code** | 26CA205PCB |
+| **Current phase** | Phase 1 — Frontend prototype |
+| **Primary technologies** | HTML5, CSS3, Vanilla JavaScript |
+| **Hosting target** | GitHub Pages |
 
-**Also included:** a My Profile dashboard (photo, completion meter, connections, saved items, activity, settings), light and dark themes, a mobile bottom tab bar, toast notifications, and About, Contact, FAQ, Privacy, Terms, **404**, **Thank you** and Coming-soon pages.
+> **Project status:** This repository currently contains a frontend prototype. The interface demonstrates user journeys with sample data and browser-local demo state. A production backend, database and real authentication have not been implemented.
+
+---
+
+## ✧ Navigate the project
+
+| Section | Section | Section |
+|:--|:--|:--|
+| [Overview](#-overview) | [Problem & solution](#-problem--solution) | [Features](#-features) |
+| [Screenshots](#-screenshots) | [User journey](#-user-journey) | [Architecture](#-architecture) |
+| [Technology stack](#-technology-stack) | [Project structure](#-project-structure) | [Getting started](#-getting-started) |
+| [Demo guide](#-demo-guide) | [Roadmap](#-roadmap) | [Limitations](#-scope--limitations) |
+| [Individual project details](#-individual-project-details) | [Workflow](#-development-workflow) | [Credits](#-credits--references) |
+
+---
+
+## 🎯 Overview
+
+Campus Connect is a social-academic networking platform concept designed around the needs of students, seniors and alumni at KIET. It brings people discovery, mentorship-oriented connections, opportunities, learning resources and campus events into one organised interface.
+
+Instead of depending entirely on scattered messages, informal groups and word of mouth, students can explore a searchable directory, view member profiles and browse curated sections for opportunities, resources and events.
+
+### The idea
+
+**One campus community. Multiple ways to grow.**
+
+- Find seniors and alumni by department, batch, skills and verification status.
+- Explore profile information and try the connect, message and call-request experiences.
+- Discover internships, jobs, hackathons and certifications.
+- Browse learning resources such as notes, roadmaps, courses and question papers.
+- Explore campus events and try the registration and calendar experiences.
+
+## 💡 Problem & solution
+
+<table>
+<tr>
+<th width="50%">The problem</th>
+<th width="50%">The proposed solution</th>
+</tr>
+<tr>
+<td valign="top">
+
+- Useful information is spread across multiple groups and channels.
+- Students may not know which seniors or alumni to approach.
+- Opportunities and learning resources can be difficult to discover later.
+- There is no single searchable place for these campus connections.
+
+</td>
+<td valign="top">
+
+- A central people directory with search and filters.
+- Detailed profiles to help students discover relevant contacts.
+- Dedicated spaces for opportunities and learning resources.
+- An events area for campus activities and participation.
+
+</td>
+</tr>
+</table>
+
+---
+
+## ✨ Features
+
+The following features are implemented as **Phase 1 frontend experiences**. Actions that would normally require a server are demonstrations only.
+
+<table>
+<tr>
+<th width="34%">Feature area</th>
+<th>What the prototype includes</th>
+</tr>
+<tr>
+<td><strong>👥 People directory</strong></td>
+<td>Browse sample student, senior and alumni profiles. Search by keyword and filter by member type, verification status, department, batch and skill. Sorting and URL-synchronised filters are included.</td>
+</tr>
+<tr>
+<td><strong>🪪 Member profiles</strong></td>
+<td>Profile details with About, Experience, Skills and Activity tabs, plus demo Connect, Message and Request a Call interactions.</td>
+</tr>
+<tr>
+<td><strong>📝 Registration</strong></td>
+<td>A four-step registration wizard covering account details, profile information, preferences and review. Includes form validation, photo selection, password-strength feedback and draft autosave.</td>
+</tr>
+<tr>
+<td><strong>🔐 Verification demo</strong></td>
+<td>College-email OTP and document-upload interface with a verification status tracker. No real identity verification service is connected.</td>
+</tr>
+<tr>
+<td><strong>🔑 Login demo</strong></td>
+<td>Login form validation, show/hide password and return navigation. Authentication is simulated in the browser.</td>
+</tr>
+<tr>
+<td><strong>💼 Opportunities</strong></td>
+<td>Browse internships, jobs, hackathons and certifications through category tabs, deadline indicators, saved items and demo Apply actions.</td>
+</tr>
+<tr>
+<td><strong>📚 Resource library</strong></td>
+<td>Browse sample notes, videos, e-books, roadmaps, question papers and courses with type, department and subject filters.</td>
+</tr>
+<tr>
+<td><strong>📅 Campus events</strong></td>
+<td>Browse events by type, mode and date; try the demo registration flow and export calendar entries as <code>.ics</code> files.</td>
+</tr>
+<tr>
+<td><strong>🧑‍💻 My Profile dashboard</strong></td>
+<td>Profile photo, completion meter, connections, saved items, activity and settings in a dashboard-style experience.</td>
+</tr>
+<tr>
+<td><strong>🎨 Interface & accessibility</strong></td>
+<td>Responsive layouts, light and dark themes, mobile navigation, toast messages, labelled forms, keyboard-friendly interactions and reduced-motion support.</td>
+</tr>
+</table>
+
+**Additional pages:** About, Contact, FAQ, Privacy, Terms, Thank You, Coming Soon and custom 404 pages.
 
 ---
 
 ## 🖼️ Screenshots
 
-| People directory | Profile detail |
-|---|---|
-| ![People directory with filters](docs/screenshots/people.jpg) | ![Profile page with Connect, Message and Call](docs/screenshots/profile.jpg) |
-| **Opportunity detail** | **My Profile dashboard** |
-| ![Opportunity detail modal](docs/screenshots/opportunity.jpg) | ![My Profile dashboard](docs/screenshots/my-profile.jpg) |
-| **Dark mode** | **Mobile: Register · Verify · Chat** |
-| ![Dark mode](docs/screenshots/dark-mode.jpg) | ![Mobile screens](docs/screenshots/mobile.jpg) |
+A look at the current frontend prototype.
+
+<table>
+<tr>
+<td width="50%">
+<strong>Home page</strong><br>
+<img src="docs/screenshots/home.jpg" alt="Campus Connect home page" width="100%">
+</td>
+<td width="50%">
+<strong>People directory</strong><br>
+<img src="docs/screenshots/people.jpg" alt="People directory with search and filters" width="100%">
+</td>
+</tr>
+<tr>
+<td>
+<strong>Member profile</strong><br>
+<img src="docs/screenshots/profile.jpg" alt="Member profile detail view" width="100%">
+</td>
+<td>
+<strong>Opportunity detail</strong><br>
+<img src="docs/screenshots/opportunity.jpg" alt="Opportunity detail view" width="100%">
+</td>
+</tr>
+<tr>
+<td>
+<strong>My Profile dashboard</strong><br>
+<img src="docs/screenshots/my-profile.jpg" alt="My Profile dashboard" width="100%">
+</td>
+<td>
+<strong>Dark theme</strong><br>
+<img src="docs/screenshots/dark-mode.jpg" alt="Campus Connect dark theme" width="100%">
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<strong>Mobile experience</strong><br>
+<img src="docs/screenshots/mobile.jpg" alt="Campus Connect mobile interface screens" width="100%">
+</td>
+</tr>
+</table>
 
 ---
 
-## ▶️ How to run
+## 🔄 User journey
 
-No installation or build step is needed.
+The prototype is organised around a simple journey from discovery to participation.
 
-**Option 1:** double-click `index.html` to open it in Chrome, Edge or Firefox.
-
-**Option 2** (recommended): run a local server from the project folder.
-```bash
-python3 -m http.server 5500
-# open http://localhost:5500
-```
-You can also use the VS Code **Live Server** extension.
-
-| Demo detail | Value |
-|---|---|
-| Login | Click **“Use demo account”**, or use any email plus a password of 8+ characters |
-| College-email verification code (OTP) | `246810` |
-| Reset demo data | My Profile → Settings → **Reset demo activity** |
-
----
-
-## 🗂️ Project structure
-
-```
-campus-connect-kiet/
-├── index.html                 # Home
-├── people.html                # Explore people (search + filters)
-├── profile.html               # Profile detail  (profile.html?id=p001)
-├── my-profile.html            # Logged-in user's dashboard
-├── opportunities.html  resources.html  events.html
-├── register.html  verify.html  login.html
-├── about.html  contact.html  faq.html  privacy.html  terms.html
-├── thank-you.html  404.html  coming-soon.html
-├── assets/
-│   ├── css/style.css          # Design tokens → base → components → pages (light & dark)
-│   ├── js/data.js             # SAMPLE DATA ONLY (profiles, opportunities, resources, events)
-│   ├── js/app.js              # Core: api layer, store, auth (demo), UI kit, forms, listing engine, layout
-│   ├── js/components.js       # Shared cards + Connect / Message / Call / Apply / Register modals
-│   ├── js/pages/*.js          # One small controller per page
-│   └── img/                   # Logo, KIET logo, sample profile photos
-├── docs/screenshots/          # Images used in this README
-├── presentation/              # Project presentation (.pptx)
-├── site.webmanifest  robots.txt  .nojekyll
-└── README.md
+```mermaid
+flowchart TD
+    A([Open Campus Connect]) --> B[Explore the home page]
+    B --> C{Choose an activity}
+    C --> D[Discover people]
+    C --> E[Browse opportunities]
+    C --> F[Explore resources]
+    C --> G[View campus events]
+    D --> H[Open a member profile]
+    H --> I[Try Connect, Message or Call]
+    E --> J[View opportunity and try Apply]
+    F --> K[Open a learning resource]
+    G --> L[View event and try Register]
+    I --> M([Continue exploring])
+    J --> M
+    K --> M
+    L --> M
 ```
 
 ---
 
 ## 🏗️ Architecture
 
-```
-HTML pages  ──►  page controllers (pages/*.js)  ──►  app.js · components.js
-                                                         │
-                                                         ▼
-                                           CC.api  (Promise-based service layer)
-                                                         │
-                          Phase 1 ─► data.js (sample data)      Phase 2 ─► Node.js / Express API
+The current application uses a framework-free, layered frontend structure. HTML pages load shared scripts and a page-specific controller. The controllers use the shared `window.CC` namespace and its Promise-based service layer.
+
+```mermaid
+flowchart TB
+    subgraph UI["Presentation layer"]
+      A[HTML pages]
+      B[Shared components]
+      C[Page controllers]
+    end
+    subgraph CORE["Frontend core"]
+      D[window.CC]
+      E[CC.api service layer]
+      F[CC.store and demo auth]
+    end
+    G[assets/js/data.js<br/>Sample data]
+    H[(Browser localStorage)]
+    A --> B
+    A --> C
+    B --> D
+    C --> D
+    D --> E
+    D --> F
+    E --> G
+    F --> H
 ```
 
-- **Data is separated from display logic.** Pages never read `data.js` directly; they call `CC.api.profiles.list()` and similar functions. In Phase 2 only `CC.api` changes to call `fetch('/api/...')`, and the pages stay the same.
-- **Classic scripts under one namespace (`window.CC`)**, so the site works both from `file://` and on GitHub Pages.
-- **Shared layout:** the header, mobile drawer, bottom navigation and footer are rendered once.
-- **Accessible and responsive:** mobile-first layout (640, 900 and 1200 px breakpoints), labelled forms, focus-trapped dialogs, keyboard-navigable tabs, `aria-live` updates and `prefers-reduced-motion` support.
+### Architecture notes
+
+- **Separation of concerns:** sample data is kept in `assets/js/data.js`; page controllers handle page-specific behaviour.
+- **Shared application namespace:** `window.CC` exposes utilities, UI helpers, forms, layout, demo state and the data service layer.
+- **Promise-based service layer:** pages use `CC.api` methods rather than directly rendering from the sample-data file.
+- **Browser-only demo persistence:** `CC.store` uses namespaced `localStorage` for demo activity and state.
+- **Future integration point:** the service layer is intended to be the boundary for a future API-backed implementation.
 
 ---
 
 ## 🧰 Technology stack
 
-| Category | Phase 1 (current) | Phase 2 (planned) |
+| Area | Phase 1 — implemented | Phase 2 — planned |
 |---|---|---|
-| Frontend | HTML5, CSS3, Vanilla JavaScript | Possible migration to React |
-| Design | Figma | – |
-| Fonts | Google Fonts (Plus Jakarta Sans) | – |
+| Frontend | HTML5, CSS3, Vanilla JavaScript | React may be evaluated |
+| Styling & design | Custom CSS design system | Component-based UI system |
+| Typography | Plus Jakarta Sans via Google Fonts | To be decided |
+| Icons | Inline SVG icons | To be decided |
+| Data | JavaScript sample data | MongoDB or Firebase Firestore |
 | Backend | Not implemented | Node.js, Express.js |
-| Database | Sample data via `data.js` | MongoDB or Firebase Firestore |
-| Authentication | UI demo only | Firebase Authentication |
-| File storage | Not implemented | Firebase Storage |
-| Version control | Git, GitHub | Git, GitHub |
-| Deployment | GitHub Pages | Vercel / Render / Railway |
+| Authentication | Browser-only demo flow | Firebase Authentication |
+| File storage | Local browser interaction only | Firebase Storage |
+| Version control | Git and GitHub | Git and GitHub |
+| Hosting | GitHub Pages deployment target | Vercel, Render or Railway may be evaluated |
 
 ---
 
-## 🔁 Git workflow & commit process
+## 📁 Project structure
+
+The following is a simplified view of the repository's current structure.
+
+```text
+campus-connect-kiet/
+├── index.html
+├── people.html
+├── profile.html
+├── my-profile.html
+├── opportunities.html
+├── resources.html
+├── events.html
+├── register.html
+├── verify.html
+├── login.html
+├── about.html
+├── contact.html
+├── faq.html
+├── privacy.html
+├── terms.html
+├── thank-you.html
+├── coming-soon.html
+├── 404.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   ├── data.js
+│   │   ├── app.js
+│   │   ├── components.js
+│   │   └── pages/
+│   │       ├── home.js
+│   │       ├── people.js
+│   │       ├── profile.js
+│   │       ├── my-profile.js
+│   │       ├── opportunities.js
+│   │       ├── resources.js
+│   │       ├── events.js
+│   │       ├── register.js
+│   │       ├── verify.js
+│   │       └── login.js
+│   └── img/
+│       ├── favicon.svg
+│       ├── brand/
+│       └── avatars/
+│
+├── docs/
+│   └── screenshots/
+│       ├── home.jpg
+│       ├── people.jpg
+│       ├── profile.jpg
+│       ├── opportunity.jpg
+│       ├── my-profile.jpg
+│       ├── dark-mode.jpg
+│       └── mobile.jpg
+│
+├── presentation/
+│   └── Campus-Connect-Presentation.pptx
+│
+├── site.webmanifest
+├── robots.txt
+├── .nojekyll
+└── README.md
+```
+
+---
+
+## 🚀 Getting started
+
+No package installation or build process is required for the current static frontend.
+
+### Prerequisites
+
+- Git
+- Python 3 (for the optional local HTTP server), or the VS Code Live Server extension
+- A modern browser such as Chrome, Edge or Firefox
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/vanshsinghsolanki/campus-connect-kiet.git
 cd campus-connect-kiet
 ```
 
-### 2. Set your identity for this repository
-Every team member commits under their **own** name and the email linked to their GitHub account, so contributions appear on the right profile:
-```bash
-git config user.name  "Your Full Name"
-git config user.email "your-github-email@example.com"
-git config user.name && git config user.email      # verify
-```
-> Tip: to keep your email private, use your GitHub no-reply address from
-> *GitHub → Settings → Emails* (`<id>+<username>@users.noreply.github.com`).
+### 2. Run a local server
 
-### 3. Log in to GitHub (first time on a machine)
-Pushing requires **write access** to this repository (the owner, or a collaborator added under *Settings → Collaborators*).
-```bash
-gh auth login              # GitHub CLI: choose GitHub.com → HTTPS → login with a web browser
-gh auth setup-git          # let git use this login when pushing
-gh auth status             # check which account is active
-```
-If the machine is already logged in to a different GitHub account:
-```bash
-gh auth login              # add the second account
-gh auth switch             # choose the account to use
-```
-*Without the GitHub CLI:* when `git push` asks for a password, paste a **Personal Access Token** (GitHub → Settings → Developer settings → Tokens, with `repo` scope). Your account password won't work.
+Recommended:
 
-### 4. Work on a branch, then commit
 ```bash
-git pull origin main                         # start from the latest code
-git checkout -b feature/short-description    # e.g. feature/event-filters
-# ...make your changes...
-git status                                   # review what changed
-git add <files>                              # or: git add .
-git commit -m "Add event type filter chips"
+python3 -m http.server 5500
 ```
-**Commit message style:** short imperative summary (≤ 72 characters), for example:
-`Add …` · `Fix …` · `Update …` · `Refactor …` · `Docs: …`
 
-### 5. Push and open a Pull Request
-```bash
-git push -u origin feature/short-description
+### 3. Open the application
+
+Visit:
+
+```text
+http://localhost:5500
 ```
-Then open a **Pull Request** on GitHub into `main`. Another team member reviews it and merges it.
 
-### 6. Deploy to GitHub Pages
-*Repository → Settings → Pages → Source: Deploy from a branch → `main` / `(root)` → Save.*
-The site will be live at **https://vanshsinghsolanki.github.io/campus-connect-kiet/** and updates automatically on every push to `main`.
+You can also open `index.html` directly in a browser. A local HTTP server is recommended for a more consistent development experience.
 
 ---
 
-## 🔭 Future scope (Phase 2)
+## 🧪 Demo guide
 
-- Real user accounts with **Firebase Authentication**
-- **Node.js + Express** REST APIs and a **MongoDB / Firestore** database
-- Persisted **connection requests**, **real-time messaging** and **notifications**
-- **Admin dashboard** for profile verification and content moderation
-- Verified users can **post opportunities** and **upload resources**
-- API-driven search and filtering; a possible migration to **React**
+| Demo item | How to try it |
+|---|---|
+| Explore profiles | Open **People** and use the search and filters. |
+| Profile interactions | Open a profile and try Connect, Message or Request a Call. |
+| Registration | Open **Register** and move through the four-step form. |
+| Login | Use the demo account option, or enter an email and a password of at least 8 characters. |
+| Verification | The sample college-email OTP is `246810`. |
+| Opportunities | Open an opportunity and try the save or Apply interaction. |
+| Events | Open an event and try Register or Add to Calendar. |
+| Reset local demo activity | Open My Profile → Settings → **Reset demo activity**. |
+
+> **Important:** These are demonstration flows. Do not enter real passwords, personal documents or sensitive information. Demo data and activity are stored in the browser, not in a secure production account.
+
+---
+
+## 🗺️ Roadmap
+
+The next phase is planned as a move from a static prototype to a connected application.
+
+```mermaid
+flowchart LR
+    A["Phase 1<br/>Frontend prototype"] --> B["Phase 2<br/>Backend & database"]
+    B --> C["Authentication<br/>& file storage"]
+    C --> D["Persistent connections<br/>& messaging"]
+    D --> E["Notifications<br/>& admin tools"]
+```
+
+### Phase 2 — planned enhancements
+
+- [ ] Design and implement a Node.js + Express REST API.
+- [ ] Connect a persistent database using MongoDB or Firebase Firestore.
+- [ ] Add real authentication and protected user sessions.
+- [ ] Implement secure profile and document storage.
+- [ ] Persist connection requests and user activity.
+- [ ] Build real-time messaging and notifications.
+- [ ] Add an admin dashboard for verification and content moderation.
+- [ ] Allow authorised users to publish opportunities and resources.
+- [ ] Evaluate a React-based frontend as the application grows.
+- [ ] Add automated testing, deployment checks and production security controls.
+
+*Roadmap items are proposed future work; they are not part of the current Phase 1 implementation.*
+
+---
+
+## 🔒 Scope & limitations
+
+Transparency matters: the current build is a frontend prototype intended to demonstrate the product concept and user experience.
+
+- **No production backend:** there is no Node.js or Express server in the current implementation.
+- **No production database:** profiles, opportunities, resources and events are sample data stored in `assets/js/data.js`.
+- **No real authentication:** login and registration are UI demonstrations, not secure account creation or sign-in.
+- **No live verification:** OTP and document-upload screens do not connect to an identity-verification provider.
+- **No server-side messaging:** connect, message, call-request, apply and event-registration actions are demo interactions.
+- **Browser-local state:** demo activity is stored in `localStorage` and is limited to the current browser environment.
+- **Sample content:** profile names, biographies, images and listings are demonstration content, not a live institutional directory.
+
+Campus Connect is an independent academic project created for learning and demonstration. It is not presented here as an officially operated or endorsed KIET platform.
+
+---
+
+## 👨‍💻 Individual project details
+
+| Detail | Information |
+|---|---|
+| Project creator | **Vansh Singh Solanki** |
+| Roll number | **2628MCA0112** |
+| Programme | Master of Computer Applications (MCA) |
+| Institution | KIET Deemed to be University |
+| Course | Front End Web Development |
+| Course code | 26CA205PCB |
+| Academic year | 2026 |
+| Project type | Individual academic project |
+
+### Development workflow
+
+The project is maintained as an individual repository. Git is used to track changes and GitHub is used for source control and hosting.
+
+Typical workflow:
+
+1. Make a focused change to the project.
+2. Run the website locally and test the affected pages.
+3. Review the changed files with `git status`.
+4. Commit the work with a clear message.
+5. Push the changes to the GitHub repository.
+6. Check the hosted version after deployment.
+
+Example commands:
+
+```bash
+git status
+git add README.md
+git commit -m "Docs: redesign individual project README"
+git push origin main
+```
 
 ---
 
 ## 🙏 Credits & references
 
-- **Sample profile photos:** placeholder portraits from [randomuser.me](https://randomuser.me) (free for use in projects), stored locally. They'll be replaced by real member photos in Phase 2.
-- **KIET logo:** property of KIET Deemed to be University, used to identify the institution this academic project is built for.
-- **Font:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) (Google Fonts). **Icons:** inline SVG in the Lucide style.
-- **References:** [MDN Web Docs](https://developer.mozilla.org/) (HTML, CSS, JavaScript) · [W3C WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) · [Figma docs](https://help.figma.com) · [Git docs](https://git-scm.com/doc) · [GitHub Pages docs](https://docs.github.com/en/pages) · [Firebase docs](https://firebase.google.com/docs) (Phase 2)
+- **Sample profile portraits:** [Random User Generator](https://randomuser.me/) — sample portrait imagery used in the prototype.
+- **Institutional identity asset:** KIET logo asset is included to identify the academic context of the project. KIET retains ownership of its institutional marks.
+- **Typography:** [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans), served through Google Fonts.
+- **Frontend documentation:** [MDN Web Docs](https://developer.mozilla.org/).
+- **Accessibility reference:** [W3C Web Accessibility Initiative](https://www.w3.org/WAI/).
+- **Design reference:** [Figma Help Center](https://help.figma.com/).
+- **Version control:** [Git documentation](https://git-scm.com/doc).
+- **Hosting reference:** [GitHub Pages documentation](https://docs.github.com/en/pages).
+- **Future backend reference:** [Firebase documentation](https://firebase.google.com/docs).
 
 ---
 
 <div align="center">
 
-Made with 💜 by **Vansh Singh Solanki**, **Vikas Jain** and **Shruti**
-MCA, KIET Deemed to be University · 2026
+### Built with curiosity, code and a campus-first idea 💜
+
+**Campus Connect**  
+An individual academic project by **Vansh Singh Solanki**  
+MCA · KIET Deemed to be University · 2026
+
+[Back to top](#campus-connect)
 
 </div>
