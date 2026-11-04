@@ -469,8 +469,8 @@ Campus Connect is an independent academic project created for learning and demon
 
 | Detail | Information |
 |---|---|
-| Project creator | **Vansh Singh Solanki** |
-| Roll number | **2628MCA0112** |
+| Project creator | **Vikas Jain** |
+| Roll number | **2628MCA0311** |
 | Programme | Master of Computer Applications (MCA) |
 | Institution | KIET Deemed to be University |
 | Course | Front End Web Development |
