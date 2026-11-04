@@ -932,11 +932,12 @@
         '<a class="brand" href="index.html" aria-label="Campus Connect home">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
         '<nav class="main-nav" aria-label="Primary"><ul>' + links + "</ul></nav>" +
         '<div class="site-header__actions">' +
+          '<button type="button" class="icon-btn command-trigger" data-command-open aria-label="Search Campus Connect" title="Search pages and actions (⌘/Ctrl + K)">' + CC.icon("search") + '<span>⌘ K</span></button>' +
           '<button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>' +
           auth +
           '<button type="button" class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">' + CC.icon("menu") + "</button>" +
         "</div>" +
-      "</div></header>" + renderDrawer(page, user);
+      "</div></header>" + renderDrawer(page, user) + renderCommandPalette();
   }
 
   function renderDrawer(page, user) {
@@ -971,6 +972,76 @@
     return '<nav class="bottom-nav" aria-label="Quick navigation">' + items.map(function (n) {
       return '<a href="' + n.href + '"' + (n.page === page ? ' aria-current="page"' : "") + ">" + CC.icon(n.icon) + "<span>" + (n.short || n.label) + "</span></a>";
     }).join("") + "</nav>";
+  }
+
+  function renderCommandPalette() {
+    return '<div class="command-palette" id="command-palette" aria-hidden="true">' +
+      '<button type="button" class="command-palette__backdrop" data-command-close tabindex="-1" aria-label="Close search"></button>' +
+      '<section class="command-palette__dialog" role="dialog" aria-modal="true" aria-labelledby="command-title">' +
+        '<div class="command-palette__search"><span class="command-palette__search-icon">' + CC.icon("search") + '</span>' +
+          '<label class="sr-only" id="command-title" for="command-search">Search Campus Connect</label>' +
+          '<input id="command-search" type="search" placeholder="Search people, events, opportunities..." autocomplete="off" spellcheck="false">' +
+          '<button type="button" class="command-palette__close" data-command-close aria-label="Close search">Esc</button></div>' +
+        '<div class="command-palette__body"><p class="command-palette__label">QUICK ACCESS</p><div id="command-results" class="command-palette__results" role="list"></div></div>' +
+        '<div class="command-palette__foot"><span>Navigate with your keyboard</span><span><kbd>Enter</kbd> open <kbd>Esc</kbd> close</span></div>' +
+      '</section></div>';
+  }
+
+  function bindCommandPalette() {
+    var palette = utils.$("#command-palette"), trigger = utils.$("[data-command-open]");
+    var input = utils.$("#command-search"), results = utils.$("#command-results");
+    if (!palette || !trigger || !input || !results) return;
+    var commands = [
+      { title: "Discover people", description: "Find students, seniors and alumni", href: "people.html", icon: "users", keywords: "people students seniors alumni directory network mentors" },
+      { title: "Events & hackathons", description: "Browse workshops, competitions and activities", href: "events.html", icon: "calendar", keywords: "events hackathons workshops webinar meetup" },
+      { title: "Career opportunities", description: "Explore internships, jobs and certifications", href: "opportunities.html", icon: "briefcase", keywords: "career internship jobs certification hiring" },
+      { title: "Learning library", description: "Find notes, roadmaps and study resources", href: "resources.html", icon: "book", keywords: "learning notes resources papers courses" },
+      { title: "My profile", description: "View your profile and saved activity", href: "my-profile.html", icon: "user", keywords: "profile account saved settings" },
+      { title: "Create account", description: "Start a Campus Connect demo profile", href: "register.html", icon: "user-plus", keywords: "signup register join account" },
+      { title: "About Campus Connect", description: "Understand the project and its scope", href: "about.html", icon: "info", keywords: "about project vision scope" },
+      { title: "Help centre", description: "Read frequently asked questions", href: "faq.html", icon: "message-circle", keywords: "help support faq questions" }
+    ];
+    function draw(query) {
+      var q = String(query || "").trim().toLowerCase();
+      var filtered = commands.filter(function (item) {
+        return !q || (item.title + " " + item.description + " " + item.keywords).toLowerCase().indexOf(q) > -1;
+      });
+      results.innerHTML = filtered.length ? filtered.map(function (item, i) {
+        return '<a class="command-item" role="listitem" data-command-item href="' + item.href + '">' +
+          '<span class="command-item__icon">' + CC.icon(item.icon) + '</span><span class="command-item__copy"><strong>' + esc(item.title) + '</strong><small>' + esc(item.description) + '</small></span><span class="command-item__enter">' + (i === 0 ? "↵" : "↗") + '</span></a>';
+      }).join("") : '<div class="command-empty"><strong>No matching destination</strong><span>Try people, events, internships or resources.</span></div>';
+    }
+    function openPalette() {
+      palette.classList.add("is-open"); palette.setAttribute("aria-hidden", "false");
+      document.body.classList.add("no-scroll"); input.value = ""; draw(""); input.focus();
+    }
+    function closePalette() {
+      if (!palette.classList.contains("is-open")) return;
+      palette.classList.remove("is-open"); palette.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("no-scroll"); trigger.focus();
+    }
+    trigger.addEventListener("click", openPalette);
+    palette.querySelectorAll("[data-command-close]").forEach(function (button) { button.addEventListener("click", closePalette); });
+    input.addEventListener("input", function () { draw(input.value); });
+    input.addEventListener("keydown", function (event) {
+      if (event.key === "Enter") { var first = results.querySelector("[data-command-item]"); if (first) window.location.href = first.href; }
+      if (event.key === "Escape") closePalette();
+    });
+    palette.addEventListener("keydown", function (event) {
+      if (event.key !== "Tab") return;
+      var focusable = Array.prototype.slice.call(palette.querySelectorAll("input, button:not([tabindex='-1']), a[href]"));
+      if (!focusable.length) return;
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    });
+    document.addEventListener("keydown", function (event) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        if (palette.classList.contains("is-open")) closePalette(); else openPalette();
+      } else if (event.key === "Escape") closePalette();
+    });
+    draw("");
   }
 
   function renderFooter() {
@@ -1043,6 +1114,8 @@
         window.location.href = "index.html";
       });
     });
+
+    bindCommandPalette();
 
     // Sticky header shadow
     var header = utils.$("#site-header");
