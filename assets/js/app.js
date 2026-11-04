@@ -874,7 +874,7 @@
     { page: "events", href: "events.html", label: "Events", icon: "calendar" }
   ];
 
-  var LOGO = '<span class="brand__mark" aria-hidden="true"><img class="brand__mark-image" src="assets/img/brand/kiet-logo.webp" alt=""></span>';
+  var LOGO = '<img class="brand__mark" src="assets/img/brand/kiet-logo.webp" alt="KIET Deemed to be University" width="144" height="60">';
 
   var layout = (CC.layout = {});
 
@@ -928,7 +928,7 @@
 
     return banner +
       '<header class="site-header" id="site-header"><div class="container site-header__inner">' +
-        '<a class="brand" href="index.html" aria-label="Campus Connect home">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
+        '<a class="brand" href="index.html" aria-label="Campus Connect home">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
         '<nav class="main-nav" aria-label="Primary"><ul>' + links + "</ul></nav>" +
         '<div class="site-header__actions">' +
           '<button type="button" class="icon-btn command-trigger" data-command-open aria-label="Search Campus Connect" title="Search pages and actions (⌘/Ctrl + K)">' + CC.icon("search") + '<span>⌘ K</span></button>' +
@@ -956,7 +956,7 @@
     return '<div class="drawer" id="mobile-drawer" aria-hidden="true">' +
       '<div class="drawer__backdrop" data-drawer-close></div>' +
       '<aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">' +
-        '<div class="drawer__head"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
+        '<div class="drawer__head"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
         '<button type="button" class="icon-btn" data-drawer-close aria-label="Close menu">' + CC.icon("x") + "</button></div>" +
         (user ? '<div class="drawer__user">' + ui.avatar({ id: "me", name: user.name }, "md") + "<div><strong>" + esc(user.name) + "</strong><span>" + esc(user.email) + "</span></div></div>" : "") +
         '<nav aria-label="Mobile"><p class="drawer__label">Explore</p><ul class="drawer__list">' + links + "</ul>" +
@@ -1051,7 +1051,7 @@
     }
     return '<footer class="site-footer"><div class="container">' +
       '<div class="footer__grid">' +
-        '<div class="footer__brand"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
+        '<div class="footer__brand"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
           "<p>An independent student-built community concept for KIET students to connect, collaborate and grow.</p>" +
           '<div class="footer__social"><a class="icon-btn" href="#" aria-label="LinkedIn (demo link)">' + CC.icon("linkedin") + '</a><a class="icon-btn" href="#" aria-label="GitHub (demo link)">' + CC.icon("github") + '</a><a class="icon-btn" href="contact.html" aria-label="Email us">' + CC.icon("mail") + "</a></div>" +
         "</div>" +
