@@ -880,8 +880,7 @@
 
   layout.theme = {
     get: function () {
-      var saved = CC.store.get("theme", null);
-      if (saved === "light" || saved === "dark") return saved;
+      // Phase 1 visual direction: keep the prototype in light mode.
       return "light";
     },
     set: function (t) {
@@ -933,7 +932,6 @@
         '<nav class="main-nav" aria-label="Primary"><ul>' + links + "</ul></nav>" +
         '<div class="site-header__actions">' +
           '<button type="button" class="icon-btn command-trigger" data-command-open aria-label="Search Campus Connect" title="Search pages and actions (⌘/Ctrl + K)">' + CC.icon("search") + '<span>⌘ K</span></button>' +
-          '<button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>' +
           auth +
           '<button type="button" class="icon-btn menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">' + CC.icon("menu") + "</button>" +
         "</div>" +
