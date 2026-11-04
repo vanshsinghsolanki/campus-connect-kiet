@@ -1140,7 +1140,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visibl
 .feature__icon { color: var(--kiet-orange); background: var(--accent-soft); }
 .site-header { border-bottom-color: var(--border); }
 .brand { gap: 11px; }
-.brand__mark { display: block; flex: 0 0 auto; width: 144px; height: auto; max-height: 60px; object-fit: contain; object-position: left center; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.brand__mark { display: block; flex: 0 0 auto; width: 108px; height: auto; max-height: 50px; object-fit: contain; object-position: left center; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.08; }
 .brand__text > span { background: none; color: var(--kiet-orange); }
 .kiet-context { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid var(--border); border-radius: 999px; color: var(--text-2); background: var(--surface); font-size: .78rem; font-weight: 700; }
@@ -1155,7 +1155,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visibl
 .section__head .eyebrow, .eyebrow { color: var(--kiet-orange); }
 .main-nav a[aria-current="page"] { color: var(--primary-text); background: var(--primary-soft); box-shadow: inset 0 -2px var(--kiet-orange); }
 :focus-visible { outline-color: var(--kiet-orange); }
-@media (max-width: 640px) { .brand__mark { width: 112px; max-height: 48px; } }
+@media (max-width: 640px) { .brand__mark { width: 92px; max-height: 43px; } }
 
 
 /* Professional workspace components and global command palette */
@@ -1389,5 +1389,5 @@ input:focus, select:focus, textarea:focus { border-color: var(--primary); }
 :root[data-theme="dark"] .demo-banner .icon-btn { color: #9bc4ff; }
 :root[data-theme="dark"] .hero__pill { background: var(--surface); }
 
-/* Full KIET wordmark sizing for shared header, drawer and footer */
-.brand { gap: 12px; }
+/* Full KIET wordmark sized to balance the two-line Campus Connect name */
+.brand { gap: 14px; align-items: center; }
