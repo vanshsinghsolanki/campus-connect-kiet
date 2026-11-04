@@ -999,7 +999,7 @@
       { title: "My profile", description: "View your profile and saved activity", href: "my-profile.html", icon: "user", keywords: "profile account saved settings" },
       { title: "Create account", description: "Start a Campus Connect demo profile", href: "register.html", icon: "user-plus", keywords: "signup register join account" },
       { title: "About Campus Connect", description: "Understand the project and its scope", href: "about.html", icon: "info", keywords: "about project vision scope" },
-      { title: "Help centre", description: "Read frequently asked questions", href: "faq.html", icon: "message-circle", keywords: "help support faq questions" }
+      { title: "Help centre", description: "Read frequently asked questions", href: "faq.html", icon: "message", keywords: "help support faq questions" }
     ];
     function draw(query) {
       var q = String(query || "").trim().toLowerCase();
