@@ -874,7 +874,7 @@
     { page: "events", href: "events.html", label: "Events", icon: "calendar" }
   ];
 
-  var LOGO = '<img class="brand__mark" src="assets/img/brand/kiet-logo.webp" alt="" aria-hidden="true" width="42" height="42">';
+  var LOGO = '<span class="brand__mark" aria-hidden="true"><img class="brand__mark-image" src="assets/img/brand/kiet-logo.webp" alt="" width="122" height="54"></span>';
 
   var layout = (CC.layout = {});
 
