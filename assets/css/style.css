@@ -1114,3 +1114,61 @@ html:not(.can-reveal) .reveal { opacity: 1; transform: none; }
 @media (max-width: 640px) { .trusted__logo { height: 64px; } }
 /* Headings focused programmatically (for screen readers) shouldn't show a focus ring */
 h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visible, h2[tabindex="-1"]:focus-visible { box-shadow: none; outline: none; }
+
+
+/* KIET-inspired visual identity — Campus Connect is an independent student project. */
+:root {
+  --kiet-navy: #102f4b;
+  --kiet-navy-deep: #092338;
+  --kiet-orange: #f15a24;
+  --kiet-orange-hover: #d94a17;
+  --primary: var(--kiet-navy);
+  --primary-hover: #174565;
+  --primary-soft: #e8f0f6;
+  --primary-text: var(--kiet-navy);
+  --accent: var(--kiet-orange);
+  --accent-soft: #fff0e9;
+  --accent-text: #b83f12;
+  --brand-grad: linear-gradient(135deg, var(--kiet-navy) 0%, var(--kiet-orange) 100%);
+  --ring: 0 0 0 3px rgba(241, 90, 36, .24);
+}
+:root[data-theme="dark"] {
+  --primary: #9fc5df;
+  --primary-hover: #c1ddf0;
+  --primary-soft: rgba(111, 164, 199, .15);
+  --primary-text: #c5e0f2;
+  --accent: #ff895c;
+  --accent-soft: rgba(241, 90, 36, .14);
+  --accent-text: #ffb091;
+  --brand-grad: linear-gradient(135deg, #9fc5df 0%, #ff895c 100%);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not([data-theme="dark"]) {
+    --primary: #9fc5df; --primary-hover: #c1ddf0;
+    --primary-soft: rgba(111, 164, 199, .15); --primary-text: #c5e0f2;
+    --accent: #ff895c; --accent-soft: rgba(241, 90, 36, .14); --accent-text: #ffb091;
+    --brand-grad: linear-gradient(135deg, #9fc5df 0%, #ff895c 100%);
+  }
+}
+.btn--primary { box-shadow: 0 6px 16px -6px rgba(16, 47, 75, .38); }
+.btn--primary:hover { background: var(--primary-hover); }
+.feature__icon { color: var(--kiet-orange); background: var(--accent-soft); }
+.site-header { border-bottom-color: var(--border); }
+.brand { gap: 11px; }
+.brand__mark { width: 40px; height: 40px; object-fit: contain; border-radius: 7px; }
+.brand__text { display: flex; flex-direction: column; line-height: 1.08; }
+.brand__text > span { background: none; color: var(--kiet-orange); }
+.brand__caption { display: block; margin-top: 3px; color: var(--text-3); font-size: .62rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.kiet-context { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid var(--border); border-radius: 999px; color: var(--text-2); background: var(--surface); font-size: .78rem; font-weight: 700; }
+.kiet-context::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--kiet-orange); }
+.trusted__card { gap: 18px; }
+.trusted__label { color: var(--kiet-orange); }
+.trusted__logo { max-width: 190px; height: auto; object-fit: contain; }
+.trusted__meta strong { color: var(--kiet-navy); }
+:root[data-theme="dark"] .trusted__meta strong { color: var(--text); }
+.hero__pill { border-color: rgba(241,90,36,.22); }
+.hero__pill .badge { background: var(--accent-soft); color: var(--accent-text); }
+.section__head .eyebrow, .eyebrow { color: var(--kiet-orange); }
+.main-nav a[aria-current="page"] { color: var(--primary-text); background: var(--primary-soft); box-shadow: inset 0 -2px var(--kiet-orange); }
+:focus-visible { outline-color: var(--kiet-orange); }
+@media (max-width: 640px) { .brand__caption { display: none; } .brand__mark { width: 36px; height: 36px; } }
