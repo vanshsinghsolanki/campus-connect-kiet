@@ -18,7 +18,7 @@ CC.page("home", function () {
       var start = performance.now();
       (function tick(now) {
         var p = Math.min(1, (now - start) / 900);
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + (p === 1 ? "+" : "");
+        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
         if (p < 1) requestAnimationFrame(tick);
       })(start);
     });
@@ -27,7 +27,7 @@ CC.page("home", function () {
   CC.api.profiles.list().then(function (profiles) {
     // Hero avatar stack + floating cards
     u.$("#hero-avatars").innerHTML = profiles.slice(0, 5).map(function (p) { return ui.avatar(p, "sm"); }).join("");
-    u.$("#hero-trust-text").textContent = profiles.length + "+ KIET students, seniors & alumni already connecting";
+    u.$("#hero-trust-text").textContent = "Illustrative sample profiles · not live campus membership data";
 
     var pick = ["p001", "p002", "p008"].map(function (id) { return profiles.filter(function (p) { return p.id === id; })[0]; }).filter(Boolean);
     u.$("#hero-visual").innerHTML = pick.map(function (p, i) {
