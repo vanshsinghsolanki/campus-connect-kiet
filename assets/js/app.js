@@ -874,7 +874,7 @@
     { page: "events", href: "events.html", label: "Events", icon: "calendar" }
   ];
 
-  var LOGO = '<svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="url(#ccg)"/><defs><linearGradient id="ccg" x1="0" y1="0" x2="32" y2="32"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs><circle cx="11" cy="12" r="3.2" fill="#fff"/><circle cx="21" cy="12" r="3.2" fill="#fff" opacity=".85"/><path d="M5.5 23c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5M15.5 23c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>';
+  var LOGO = '<img class="brand__mark" src="assets/img/brand/kiet-logo.webp" alt="" aria-hidden="true" width="42" height="42">';
 
   var layout = (CC.layout = {});
 
@@ -929,7 +929,7 @@
 
     return banner +
       '<header class="site-header" id="site-header"><div class="container site-header__inner">' +
-        '<a class="brand" href="index.html" aria-label="Campus Connect home">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
+        '<a class="brand" href="index.html" aria-label="Campus Connect home">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
         '<nav class="main-nav" aria-label="Primary"><ul>' + links + "</ul></nav>" +
         '<div class="site-header__actions">' +
           '<button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle theme"></button>' +
@@ -957,7 +957,7 @@
     return '<div class="drawer" id="mobile-drawer" aria-hidden="true">' +
       '<div class="drawer__backdrop" data-drawer-close></div>' +
       '<aside class="drawer__panel" role="dialog" aria-modal="true" aria-label="Menu">' +
-        '<div class="drawer__head"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
+        '<div class="drawer__head"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
         '<button type="button" class="icon-btn" data-drawer-close aria-label="Close menu">' + CC.icon("x") + "</button></div>" +
         (user ? '<div class="drawer__user">' + ui.avatar({ id: "me", name: user.name }, "md") + "<div><strong>" + esc(user.name) + "</strong><span>" + esc(user.email) + "</span></div></div>" : "") +
         '<nav aria-label="Mobile"><p class="drawer__label">Explore</p><ul class="drawer__list">' + links + "</ul>" +
@@ -982,8 +982,8 @@
     }
     return '<footer class="site-footer"><div class="container">' +
       '<div class="footer__grid">' +
-        '<div class="footer__brand"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span></span></a>' +
-          "<p>One trusted network for students, seniors and alumni: find mentors, opportunities, resources and events on your campus.</p>" +
+        '<div class="footer__brand"><a class="brand" href="index.html">' + LOGO + '<span class="brand__text">Campus<span>Connect</span><small class="brand__caption">Independent student project</small></span></a>' +
+          "<p>An independent student-built community concept for KIET students to connect, collaborate and grow.</p>" +
           '<div class="footer__social"><a class="icon-btn" href="#" aria-label="LinkedIn (demo link)">' + CC.icon("linkedin") + '</a><a class="icon-btn" href="#" aria-label="GitHub (demo link)">' + CC.icon("github") + '</a><a class="icon-btn" href="contact.html" aria-label="Email us">' + CC.icon("mail") + "</a></div>" +
         "</div>" +
         col("Explore", [["people.html", "People"], ["opportunities.html", "Opportunities"], ["resources.html", "Resources"], ["events.html", "Events"]]) +
