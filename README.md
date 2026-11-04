@@ -37,8 +37,8 @@ Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 |---|---|
 | **Project** | Campus Connect |
 | **Project type** | Individual academic project |
-| **Creator** | Vansh Singh Solanki |
-| **Roll number** | 2628MCA0112 |
+| **Creator** | Vikas jain |
+| **Roll number** | 2628MCA0311 |
 | **Programme** | Master of Computer Applications (MCA) |
 | **Institution** | KIET Deemed to be University |
 | **Course** | Front End Web Development |
