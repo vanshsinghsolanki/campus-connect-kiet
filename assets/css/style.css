@@ -1157,8 +1157,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visibl
 .feature__icon { color: var(--kiet-orange); background: var(--accent-soft); }
 .site-header { border-bottom-color: var(--border); }
 .brand { gap: 11px; }
-.brand__mark { --brand-mark-size: 42px; --brand-mark-image-width: 122px; position: relative; display: block; flex: 0 0 var(--brand-mark-size); width: var(--brand-mark-size); height: var(--brand-mark-size); overflow: hidden; border-radius: 8px; border: 1px solid var(--border); background: #fff; box-shadow: 0 1px 4px rgba(9,35,56,.12); }
-.brand__mark-image { position: absolute; top: 0; left: 0; display: block; width: var(--brand-mark-image-width); max-width: none; height: auto; }
+.brand__mark { --brand-mark-size: 42px; display: block; flex: 0 0 var(--brand-mark-size); width: var(--brand-mark-size); height: var(--brand-mark-size); overflow: hidden; border-radius: 7px; background: #fff; }
+.brand__mark-image { display: block; width: auto; height: 100%; max-width: none; object-fit: contain; object-position: left center; }
 .brand__text { display: flex; flex-direction: column; line-height: 1.08; }
 .brand__text > span { background: none; color: var(--kiet-orange); }
 .brand__caption { display: block; margin-top: 3px; color: var(--text-3); font-size: .62rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
@@ -1174,7 +1174,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visibl
 .section__head .eyebrow, .eyebrow { color: var(--kiet-orange); }
 .main-nav a[aria-current="page"] { color: var(--primary-text); background: var(--primary-soft); box-shadow: inset 0 -2px var(--kiet-orange); }
 :focus-visible { outline-color: var(--kiet-orange); }
-@media (max-width: 640px) { .brand__caption { display: none; } .brand__mark { --brand-mark-size: 36px; --brand-mark-image-width: 105px; } }
+@media (max-width: 640px) { .brand__caption { display: none; } .brand__mark { --brand-mark-size: 38px; } }
 
 
 /* Professional workspace components and global command palette */
