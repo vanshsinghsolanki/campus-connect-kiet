@@ -1260,6 +1260,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus, h1[tabindex="-1"]:focus-visibl
   .workspace-side { border-left:0; border-top:1px solid var(--border); }
 }
 @media (max-width:640px) {
+  .command-trigger > span { display:none; }
   .workspace-heading,.snapshot-heading { display:block; }
   .workspace-preview-label { margin-top:14px; }
   .quick-launch-grid { grid-template-columns:1fr; }
