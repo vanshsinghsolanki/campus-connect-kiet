@@ -334,8 +334,6 @@
     var max = u.today(); max.setDate(max.getDate() + 30);
     var iso = function (d) { return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
     var slots = ["10:00 AM", "12:30 PM", "4:00 PM", "6:30 PM", "8:00 PM"];
-    var user = currentUser();
-
     ui.modal.open({
       title: "Request a call",
       subtitle: "Propose a time. " + p.name.split(" ")[0] + " can accept or suggest another slot.",
@@ -356,8 +354,6 @@
           "</div></fieldset>" +
           '<div class="field"><label class="field__label" for="call-topic">What would you like to discuss?</label>' +
             '<textarea id="call-topic" name="topic" rows="3" required minlength="10" maxlength="400" placeholder="e.g. Guidance on preparing for SDE internships and choosing projects"></textarea></div>' +
-          '<div class="field"><label class="field__label" for="call-phone">Your phone number <span class="optional">(optional)</span></label>' +
-            '<input type="tel" id="call-phone" name="phone" inputmode="tel" pattern="[0-9+\\s\\-]{10,15}" title="Enter a valid phone number (10–15 digits)" placeholder="+91 98765 43210" value="' + esc(user.phone || "") + '"></div>' +
         "</form>",
       footer: '<button type="button" class="btn btn--ghost" data-close>Cancel</button>' +
               '<button type="submit" form="call-form" class="btn btn--primary">' + icon("phone") + "Send call request</button>",
@@ -438,7 +434,6 @@
             '<div class="form-grid">' +
               field("apply-name", "Full name", '<input id="apply-name" name="name" required minlength="3" autocomplete="name" value="' + esc(user.name || "") + '">') +
               field("apply-email", "Email", '<input id="apply-email" type="email" name="email" required autocomplete="email" value="' + esc(user.email || "") + '">') +
-              field("apply-phone", "Phone", '<input id="apply-phone" type="tel" name="phone" required inputmode="tel" pattern="[0-9+\\s\\-]{10,15}" title="Enter a valid phone number (10–15 digits)" autocomplete="tel">') +
               field("apply-batch", "Batch / Year", '<select id="apply-batch" name="batch" required><option value="">Select</option>' + [2026, 2027, 2028, 2029, 2030].map(function (y) { return "<option" + (+user.batch === y ? " selected" : "") + ">" + y + "</option>"; }).join("") + "</select>") +
             "</div>" +
             field("apply-resume", "Resume link", '<input id="apply-resume" type="url" name="resume" required placeholder="https://drive.google.com/…">', "Share a public Google Drive / Dropbox link.") +
@@ -596,7 +591,6 @@
             '<div class="form-grid">' +
               field("ev-name", "Full name", '<input id="ev-name" name="name" required minlength="3" autocomplete="name" value="' + esc(user.name || "") + '">') +
               field("ev-email", "Email", '<input id="ev-email" type="email" name="email" required autocomplete="email" value="' + esc(user.email || "") + '">') +
-              field("ev-phone", "Phone", '<input id="ev-phone" type="tel" name="phone" required inputmode="tel" pattern="[0-9+\\s\\-]{10,15}" title="Enter a valid phone number (10–15 digits)" autocomplete="tel">') +
               field("ev-dept", "Department", '<select id="ev-dept" name="department" required><option value="">Select</option>' + CC.api.meta().departments.map(function (d) { return '<option value="' + d.code + '"' + (user.department === d.code ? " selected" : "") + ">" + esc(d.name) + "</option>"; }).join("") + "</select>") +
             "</div>" +
             (e.mode !== "offline" ? '<fieldset class="field"><legend class="field__label">How will you attend?</legend><div class="choice-chips"><label class="choice-chip"><input type="radio" name="attend" value="In person"' + (e.mode === "hybrid" ? " checked" : "") + '><span>In person</span></label><label class="choice-chip"><input type="radio" name="attend" value="Online"' + (e.mode === "online" ? " checked" : "") + "><span>Online</span></label></div></fieldset>" : "") +
