@@ -70,7 +70,7 @@ window.CC_DATA = {
         { title: "SDE Intern", org: "Amazon", period: "Summer 2020" }
       ],
       achievements: ["ICPC Regionalist 2019", "Smart India Hackathon Winner 2020"],
-      email: "aarav.sharma@example.com", phone: "+91 98XXX XX101",
+      email: "aarav.sharma@example.com",
       links: { linkedin: "#", github: "#" }, connections: 412, callAvailable: true
     },
     {
@@ -85,7 +85,7 @@ window.CC_DATA = {
         { title: "Lead", org: "GDSC Campus Chapter", period: "2025 – Present" }
       ],
       achievements: ["Google Summer of Code 2025", "Best Paper — Student Track, NLPConf"],
-      email: "priya.nair@example.com", phone: "+91 97XXX XX202",
+      email: "priya.nair@example.com",
       links: { linkedin: "#", github: "#" }, connections: 286, callAvailable: true
     },
     {
@@ -97,7 +97,7 @@ window.CC_DATA = {
       openTo: ["Project Collaboration", "Study Groups"],
       experience: [],
       achievements: ["College Coding Contest — Top 20"],
-      email: "rohan.verma@example.com", phone: "+91 96XXX XX303",
+      email: "rohan.verma@example.com",
       links: { linkedin: "#", github: "#" }, connections: 58, callAvailable: false
     },
     {
@@ -112,7 +112,7 @@ window.CC_DATA = {
         { title: "Design Engineer", org: "Texas Instruments", period: "2019 – 2022" }
       ],
       achievements: ["MS Admit — Georgia Tech (deferred)", "University Gold Medalist"],
-      email: "sneha.iyer@example.com", phone: "+91 95XXX XX404",
+      email: "sneha.iyer@example.com",
       links: { linkedin: "#", github: "" }, connections: 530, callAvailable: true
     },
     {
@@ -127,7 +127,7 @@ window.CC_DATA = {
         { title: "Captain", org: "Formula Student Team", period: "2025 – Present" }
       ],
       achievements: ["Formula Bharat 2025 — Top 10"],
-      email: "kabir.singh@example.com", phone: "+91 94XXX XX505",
+      email: "kabir.singh@example.com",
       links: { linkedin: "#", github: "" }, connections: 190, callAvailable: true
     },
     {
@@ -142,7 +142,7 @@ window.CC_DATA = {
         { title: "Associate PM", org: "Swiggy", period: "2022 – 2023" }
       ],
       achievements: ["Case Competition Winner — IIM Fest 2021"],
-      email: "ananya.gupta@example.com", phone: "+91 93XXX XX606",
+      email: "ananya.gupta@example.com",
       links: { linkedin: "#", github: "" }, connections: 610, callAvailable: true
     },
     {
@@ -154,7 +154,7 @@ window.CC_DATA = {
       openTo: ["Study Groups", "Mentorship"],
       experience: [{ title: "Coordinator", org: "Coding Club", period: "2025 – Present" }],
       achievements: ["Codeforces Expert (1750)", "CodeChef 4★"],
-      email: "vikram.rao@example.com", phone: "+91 92XXX XX707",
+      email: "vikram.rao@example.com",
       links: { linkedin: "#", github: "#" }, connections: 144, callAvailable: false
     },
     {
@@ -169,7 +169,7 @@ window.CC_DATA = {
         { title: "UX Designer", org: "Zomato", period: "2020 – 2022" }
       ],
       achievements: ["Adobe Design Achievement Award"],
-      email: "meera.joshi@example.com", phone: "+91 91XXX XX808",
+      email: "meera.joshi@example.com",
       links: { linkedin: "#", github: "" }, connections: 475, callAvailable: true
     },
     {
@@ -181,7 +181,7 @@ window.CC_DATA = {
       openTo: ["Project Collaboration", "Freelance"],
       experience: [{ title: "Full-Stack Intern", org: "Startup (YC W24)", period: "Summer 2025" }],
       achievements: ["HackCampus 2025 — 1st Place"],
-      email: "arjun.mehta@example.com", phone: "+91 90XXX XX909",
+      email: "arjun.mehta@example.com",
       links: { linkedin: "#", github: "#" }, connections: 233, callAvailable: true
     },
     {
@@ -193,7 +193,7 @@ window.CC_DATA = {
       openTo: ["Project Collaboration"],
       experience: [],
       achievements: ["Robotics Club — Best Project 2025"],
-      email: "fatima.khan@example.com", phone: "+91 89XXX XX010",
+      email: "fatima.khan@example.com",
       links: { linkedin: "#", github: "#" }, connections: 76, callAvailable: false
     },
     {
@@ -208,7 +208,7 @@ window.CC_DATA = {
         { title: "Site Engineer", org: "L&T Construction", period: "2018 – 2021" }
       ],
       achievements: ["GATE AIR 312 (2018)"],
-      email: "rahul.desai@example.com", phone: "+91 88XXX XX111",
+      email: "rahul.desai@example.com",
       links: { linkedin: "#", github: "" }, connections: 320, callAvailable: true
     },
     {
@@ -220,7 +220,7 @@ window.CC_DATA = {
       openTo: ["Mentorship", "Study Groups"],
       experience: [{ title: "Summer Analyst", org: "Goldman Sachs", period: "Summer 2025" }],
       achievements: ["AWS Certified Solutions Architect", "Pre-Placement Offer — Goldman Sachs"],
-      email: "ishita.banerjee@example.com", phone: "+91 87XXX XX212",
+      email: "ishita.banerjee@example.com",
       links: { linkedin: "#", github: "#" }, connections: 298, callAvailable: true
     },
     {
@@ -232,7 +232,7 @@ window.CC_DATA = {
       openTo: ["Study Groups", "Research"],
       experience: [],
       achievements: [],
-      email: "dev.patel@example.com", phone: "+91 86XXX XX313",
+      email: "dev.patel@example.com",
       links: { linkedin: "#", github: "" }, connections: 34, callAvailable: false
     },
     {
@@ -247,7 +247,7 @@ window.CC_DATA = {
         { title: "Data Science Intern", org: "Flipkart", period: "Summer 2022" }
       ],
       achievements: ["Kaggle Competitions Expert"],
-      email: "neha.kulkarni@example.com", phone: "+91 85XXX XX414",
+      email: "neha.kulkarni@example.com",
       links: { linkedin: "#", github: "#" }, connections: 388, callAvailable: true
     },
     {
@@ -259,7 +259,7 @@ window.CC_DATA = {
       openTo: ["Project Collaboration", "Networking"],
       experience: [{ title: "Analyst", org: "Infosys", period: "2023 – 2025" }],
       achievements: ["E-Summit 2025 Organizer"],
-      email: "siddharth.rao@example.com", phone: "+91 84XXX XX515",
+      email: "siddharth.rao@example.com",
       links: { linkedin: "#", github: "" }, connections: 120, callAvailable: true
     },
     {
@@ -271,7 +271,7 @@ window.CC_DATA = {
       openTo: ["Study Groups", "GATE Guidance"],
       experience: [{ title: "Intern", org: "ISRO", period: "Summer 2025" }],
       achievements: ["ISRO Internship 2025"],
-      email: "tanvi.reddy@example.com", phone: "+91 83XXX XX616",
+      email: "tanvi.reddy@example.com",
       links: { linkedin: "#", github: "" }, connections: 167, callAvailable: true
     }
   ],
