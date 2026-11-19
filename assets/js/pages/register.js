@@ -54,7 +54,7 @@ CC.page("register", function () {
   function restoreDraft() {
     var d = CC.store.get(DRAFT_KEY, null);
     if (!d || !(d.name || d.email || d.headline)) return;
-    ["name", "email", "phone", "department", "batch", "company", "headline", "bio", "linkedin", "github"].forEach(function (k) {
+    ["name", "email", "department", "batch", "company", "headline", "bio", "linkedin", "github"].forEach(function (k) {
       var el = form.elements[k];
       if (el && d[k]) el.value = d[k];
     });
@@ -100,7 +100,7 @@ CC.page("register", function () {
   function renderReview() {
     var d = CC.forms.serialize(form);
     var rows = [
-      ["Name", d.name], ["Email", d.email], ["Phone", d.phone || "—"],
+      ["Name", d.name], ["Email", d.email],
       ["Role", u.lookup("roles", d.role)], ["Department", u.lookup("departments", d.department)], ["Batch", d.batch],
       d.role === "alumni" ? ["Company", d.company || "—"] : null,
       ["Photo", photo.value() ? "Added ✓" : "Not added"],
@@ -128,8 +128,7 @@ CC.page("register", function () {
         name: d.name.trim(),
         photo: photo.value(),
         email: d.email.trim().toLowerCase(),
-        phone: d.phone || "",
-        role: d.role,
+role: d.role,
         department: d.department,
         batch: +d.batch,
         company: d.role === "alumni" ? d.company || "" : "",
