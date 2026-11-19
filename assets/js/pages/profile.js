@@ -104,7 +104,6 @@ CC.page("people", function () {
               "<aside>" +
                 '<div class="panel"><h2>Contact</h2><ul class="info-list">' +
                   "<li>" + icon("mail") + "<div><span>Email</span>" + esc(p.email) + "</div></li>" +
-                  "<li>" + icon("phone") + "<div><span>Phone</span>" + esc(p.phone) + "</div></li>" +
                   (p.company ? "<li>" + icon("building") + "<div><span>Company</span>" + esc(p.company) + "</div></li>" : "") +
                 "</ul>" +
                 '<div class="btn-row mt-2">' +
