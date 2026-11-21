@@ -46,6 +46,7 @@ CC.page("people", function () {
         if (s.department && p.department !== s.department) return false;
         if (s.batch && String(p.batch) !== String(s.batch)) return false;
         if (s.skill && p.skills.indexOf(s.skill) === -1) return false;
+        if (s.saved.length && !CC.activity.isSaved("people", p.id)) return false;
         return CC.listing.matches(s.q, [p.name, p.headline, p.company, p.department, u.lookup("departments", p.department), p.bio, p.skills.join(" "), p.openTo.join(" ")]);
       },
       sorters: {
@@ -65,7 +66,8 @@ CC.page("people", function () {
           verification: function (v) { return u.lookup("verification", v); },
           department: function (v) { return v; },
           batch: function (v) { return "Batch " + v; },
-          skill: function (v) { return v; }
+          skill: function (v) { return v; },
+          saved: function () { return "Saved only"; }
         }, listing);
         u.$("#filter-count").textContent = active || "";
 
@@ -81,5 +83,6 @@ CC.page("people", function () {
     });
 
     document.addEventListener("cc:connection", function () { listing.refresh(); });
+    document.addEventListener("cc:saved", function () { if (listing.state().saved.length) listing.refresh(); });
   });
 });

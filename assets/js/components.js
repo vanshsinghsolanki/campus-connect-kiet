@@ -44,6 +44,7 @@
       ui.chips(p.skills, 3) +
       '<div class="card__actions">' +
         '<a class="btn btn--outline btn--sm" href="profile.html?id=' + p.id + '">View profile</a>' +
+        saveButton("people", p.id, p.name) +
         C.connectButton(p, "sm") +
       "</div>" +
     "</article>";
