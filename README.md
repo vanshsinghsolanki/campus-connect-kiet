@@ -43,11 +43,11 @@ Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 | **Institution** | KIET Deemed to be University |
 | **Course** | Front End Web Development |
 | **Course code** | 26CA205PCB |
-| **Current phase** | Phase 1 — Frontend prototype |
+| **Current phase** | Phase 1 frontend + Phase 2 profile API foundation |
 | **Primary technologies** | HTML5, CSS3, Vanilla JavaScript |
 | **Hosting target** | GitHub Pages |
 
-> **Project status:** This repository currently contains a frontend prototype. The interface demonstrates user journeys with sample data and browser-local demo state. A production backend, database and real authentication have not been implemented.
+> **Project status:** The existing site remains a Phase 1 frontend prototype using sample data and browser-local demo state. A Phase 2 read-only profile API foundation now lives in `server/`; it requires a separately configured MongoDB instance and Node-capable hosting. Authentication and profile write operations are not implemented.
 
 ---
 
@@ -65,12 +65,13 @@ Master of Computer Applications (MCA) · KIET Deemed to be University · 2026
 
 ## 📄 Project documents
 
-The individual academic synopsis and project presentation are available below.
+The individual academic synopsis, project presentation and Phase 2 API setup guide are available below.
 
 | Document | Description | Link |
 |---|---|---|
 | **Project synopsis** | Individual submission version, revised from the earlier synopsis while preserving the project scope and technical details. | [Read synopsis](docs/Campus-Connect-Individual-Synopsis.md) |
 | **Project presentation** | Campus Connect project slide deck (.pptx). | [View / download presentation](presentation/Campus-Connect-Presentation.pptx) |
+| **Backend API** | Setup, endpoints, environment and safety notes for the read-only profile API. | [Open API guide](server/README.md) |
 
 ## 🎯 Overview
 
@@ -289,7 +290,7 @@ flowchart TB
 | Typography | Plus Jakarta Sans via Google Fonts | To be decided |
 | Icons | Inline SVG icons | To be decided |
 | Data | JavaScript sample data | MongoDB or Firebase Firestore |
-| Backend | Not implemented | Node.js, Express.js |
+| Backend | Read-only profile API foundation | Node.js, Express 5, MongoDB via Mongoose |
 | Authentication | Browser-only demo flow | Firebase Authentication |
 | File storage | Local browser interaction only | Firebase Storage |
 | Version control | Git and GitHub | Git and GitHub |
@@ -453,7 +454,7 @@ flowchart LR
 
 Transparency matters: the current build is a frontend prototype intended to demonstrate the product concept and user experience.
 
-- **No production backend:** there is no Node.js or Express server in the current implementation.
+- **Backend foundation only:** `server/` contains a read-only profile API; the API is not deployed, and the static GitHub Pages site still uses sample data. Opportunities, resources and events remain frontend demo data.
 - **No production database:** profiles, opportunities, resources and events are sample data stored in `assets/js/data.js`.
 - **No real authentication:** login and registration are UI demonstrations, not secure account creation or sign-in.
 - **No live verification:** OTP and document-upload screens do not connect to an identity-verification provider.
